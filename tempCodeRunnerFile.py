@@ -11,7 +11,6 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error,mean_squared_error,r2_score
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 
 df = pd.read_csv("car data.csv")
 
@@ -43,27 +42,4 @@ print("Mean Absolute Error:", mae)
 print("Mean Squared Error:", mse)
 print("Root Mean Squared Error:", rmse)
 print("R² Score:", r2)
-
-
-
-plt.figure(figsize=(8,6))
-
-plt.scatter(y_test, predictions)
-
-plt.plot(
-    [y_test.min(), y_test.max()],
-    [y_test.min(), y_test.max()]
-)
-
-plt.xlabel("Actual Selling Price")
-plt.ylabel("Predicted Selling Price")
-plt.title("Actual vs Predicted Car Prices")
-
-plt.grid(True)
-
-plt.show()
-
-
-
-
 
